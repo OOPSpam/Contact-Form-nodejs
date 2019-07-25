@@ -45,7 +45,7 @@ app.post('/send', (req, res) => {
         // handle the error
         return console.log(result.body);
       }
-      if (result.body.Score >= 3) {
+      if (result.body.Score < 3) {
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
           host: 'mail.YOURDOMAIN.com',
